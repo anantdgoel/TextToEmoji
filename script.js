@@ -1,35 +1,42 @@
 setInterval(function() {
 	let chat = document.getElementsByClassName('_1mf _1mj');
+	console.log(chat)
   // make sure chat window exists
   if (chat.length>0){
-    let text = chat["0"].textContent;
-    // make sure user has typed something
-    if(text.length > 1){
-      let start = text.indexOf(":")+1;
-      // check for starting ':'
-      if(start > 0) {
-        let end = text.indexOf(":", start);
-        // check for ending ':'
-        if(end > 0) {
-          let emoji_alias = text.slice(start, end);
-          // Make sure emoji doesnt have whitespace
-          if(/^\S*$/.test(emoji_alias)){
-              // console.log("emoji requested: "+emoji_alias+"\nstarts: "+start+"\nends:"+end);
-              // console.log(getMeAnEmoji(emoji_alias))
-              let converted = text.substring(0, start-1)+getMeAnEmoji(emoji_alias)+text.substring(end+1)
-              // console.log("final: "+converted)
-              chat["0"].textContent = converted;
-          }
-        }
-      }
-    } else {
-      // console.log("Found an empty chat window")
-    }
+		for(i = 0; i<chat.length; i++){
+			emojify(chat[i.toString()]);
+		}
   } else {
     // console.log("No chat windows open")
   }
 
 }, 1000);
+
+function emojify(chat_box) {
+		let text = chat_box.textContent;
+		// make sure user has typed something
+		if(text.length > 1){
+			let start = text.indexOf(":")+1;
+			// check for starting ':'
+			if(start > 0) {
+				let end = text.indexOf(":", start);
+				// check for ending ':'
+				if(end > 0) {
+					let emoji_alias = text.slice(start, end);
+					// Make sure emoji doesnt have whitespace
+					if(/^\S*$/.test(emoji_alias)){
+							console.log("emoji requested: "+emoji_alias+"\nstarts: "+start+"\nends:"+end);
+							// console.log(getMeAnEmoji(emoji_alias))
+							let converted = text.substring(0, start-1)+getMeAnEmoji(emoji_alias)+text.substring(end+1)
+							// console.log("final: "+converted)
+							chat_box.textContent = converted;
+					}
+				}
+			}
+		} else {
+			// console.log("Found an empty chat window")
+		}
+}
 
 /** SOURCE CODE FROM: https://github.com/notwaldorf/emoji-translate **/
 var allEmojis;

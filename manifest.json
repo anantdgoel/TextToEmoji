@@ -21,7 +21,7 @@
   "content_scripts": [
       {
          "matches": ["https://www.facebook.com/*"],
-         "js": [ "jquery-2.1.4.min.js", "test.js"]
+         "js": [ "jquery-2.1.4.min.js", "script.js"]
       }
     ]
 }
