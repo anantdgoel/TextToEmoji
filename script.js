@@ -2,7 +2,7 @@ setInterval(function() {
 	let chat = document.getElementsByClassName('_1mf _1mj');
   // make sure chat window exists
   if (chat.length>0){
-    let text = chat["0"].innerText;
+    let text = chat["0"].textContent;
     // make sure user has typed something
     if(text.length > 1){
       let start = text.indexOf(":")+1;
@@ -18,7 +18,7 @@ setInterval(function() {
               // console.log(getMeAnEmoji(emoji_alias))
               let converted = text.substring(0, start-1)+getMeAnEmoji(emoji_alias)+text.substring(end+1)
               // console.log("final: "+converted)
-              chat["0"].innerText = converted;
+              chat["0"].textContent = converted;
           }
         }
       }
