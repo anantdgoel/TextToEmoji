@@ -3,6 +3,9 @@ Disclaimer: This is WIP
 # TextToEmoji
 Replace :text: with appropriate emojis on fb messenger, slack-style. 
 
+## Demo
+![boom emoji](https://media.giphy.com/media/xUPGcfZgyGfim8Ellm/giphy.gif)
+
 ## Known Bugs
 - Cursor moves to the start each time text is replaced with emoji
 - Need to press 'spacebar' for emoji to enter DOM or else :text: appears
