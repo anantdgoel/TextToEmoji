@@ -1,7 +1,7 @@
 Disclaimer: This is WIP
 
 # TextToEmoji
-Replace :text: with appropriate emojis, slack-style. 
+Replace :text: with appropriate emojis on fb messenger, slack-style. 
 
 ## Known Bugs
 - Cursor moves to the start each time text is replaced with emoji
@@ -9,3 +9,6 @@ Replace :text: with appropriate emojis, slack-style.
 - Cannot backspace after emoji is inserted
 - Does not support multiple chat windows simultaneosly
 - I'm sure there are more...
+
+## Thanks
+- [emoji-translate by notwaldorf](https://github.com/notwaldorf/emoji-translate "emoji-translate's github page")
