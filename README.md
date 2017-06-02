@@ -4,7 +4,7 @@ Disclaimer: This is WIP
 Replace :text: with appropriate emojis on fb messenger, slack-style. 
 
 ## Demo
-![boom emoji](https://media.giphy.com/media/xUPGcfZgyGfim8Ellm/giphy.gif)
+![:boom:](https://media.giphy.com/media/xUPGcfZgyGfim8Ellm/giphy.gif)
 
 ## Known Bugs
 - Cursor moves to the start each time text is replaced with emoji
